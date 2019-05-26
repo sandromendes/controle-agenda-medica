@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence/orm" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	
+	<!-- BLOCO DE CONSULTAS DE RETORNO UNITÁRIO  -->
+	<!-- 
+	<named-query name="selectUsuarios">
+		<query>
+          		SELECT usuario 
+          		FROM Usuario usuario 
+          		WHERE usuario.isActive = true
+          		ORDER BY usuario.login
+          </query>
+	</named-query>
+
+	<named-query name="autenticaUsuario">
+		<query> 
+     			SELECT usuario
+     			FROM Usuario usuario
+     			WHERE login LIKE ? 
+     			AND senha LIKE ?
+     			AND isActive = true
+     	</query>
+	</named-query>
+	
+	<named-query name="permissoesUsuario">
+		<query> 
+			SELECT	permissao, categoria, usuario, permissaoUsuariosRelacao         
+			FROM   	Permissao permissao          
+			JOIN   	permissao.categoriaPermissao AS categoria
+			JOIN	permissao.permissaoUsuarios AS permissaoUsuariosRelacao
+			JOIN	permissaoUsuariosRelacao.usuario AS usuario
+			WHERE 	usuario.id = ?
+     	</query>
+	</named-query>
+	-->
+	<!-- BLOCO DE CONSULTAS DE RETORNO EM LISTA  -->
+	<!-- 
+	<named-query name="listaClientesTelefones">
+		<query> 
+     			SELECT cliente, telefones
+     			FROM Cliente cliente
+     			JOIN cliente.clienteTelefonesRelacao AS clienteTelefones
+     			JOIN clienteTelefones.telefone AS telefones
+     			WHERE cliente.isActive = true
+     			ORDER BY cliente.id ASC
+     	</query>
+	</named-query>
+
+	<named-query name="selectListaClientePessoa">
+		<query> 
+     		SELECT clientePessoa
+     		FROM ClientePessoa clientePessoa
+     		JOIN clientePessoa.cliente AS cliente WITH cliente.id = ?
+     		WHERE clientePessoa.isActive = true	
+     	</query>
+	</named-query>	
+	
+	-->
+	<!-- Template para Query Named -->
+	<!-- 
+	<named-query name="">
+		<query> 
+     			
+     	</query>
+	</named-query>
+ 	-->
+</entity-mappings>
